@@ -1,13 +1,14 @@
 const btn = document.querySelector('.btn')
 
     btn.addEventListener('click', async()=>{
+        
         const city = document.querySelector('.city')
         document.getElementById('myForm').style.display = 'none'
         document.querySelector('.spinner').style.display = 'block'
 
         let key = `065086f0498524b42a16c8414204b51b`
     
-        let api = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city.value}&appid=${key}&lang=pt_br`)
+        let api = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city.value}&appid=${key}&lang=pt_br&units=metric`)
         const dados = await api.json()
 
         document.querySelector('.spinner').style.display = 'none'
@@ -28,17 +29,18 @@ const btn = document.querySelector('.btn')
 
 
         // fala no javascript
-        const mensagem = `O tempo em ${city.value} está ${dados.weather[0].description}`
+        const mensagem = `O tempo em ${city.value} está ${dados.weather[0].description} e com ${Math.floor(dados.main.temp)}°C`
+
         const fala = new SpeechSynthesisUtterance(mensagem)
-        
+
         fala.pitch = 1
         fala.rate = 1
         fala.volume = 1
         fala.lang = "pt-br"
         
-        speechSynthesis.speak(fala)
+        
+        return speechSynthesis.speak(fala)
     
-        console.log(dados)
     })
 
 

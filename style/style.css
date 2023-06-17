@@ -85,7 +85,7 @@ i {
 }
 
 .resultado-city {
-    margin-top: 10px;
+    margin-top: 12px;
     text-transform: capitalize;
 }
 
@@ -100,7 +100,7 @@ i {
 .icone-clima .icon-result {
     color: var(--fontColor);
     text-transform: capitalize;
-    margin-top: 15px;
+    margin-top: 16px;
 }
 
 .temperatura {
