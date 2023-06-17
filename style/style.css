@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html,
+body {
+    height: 100vh;
+    width: 100%;
+    background: url('/assets/background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+:root {
+    --fontColor: #fff;
+    --colorBackgroundCard: rgba(0, 0, 0, 0.3);
+    --colorBackgroundButton: rgba(0, 0, 0, 0.699);
+}
+
+.card-form {
+    height: auto;
+    width: auto;
+    background: var(--colorBackgroundCard);
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.452);
+}
+
+.card-form #myForm {
+    height: auto;
+    width: 100%;
+    text-align: left;
+    padding: 20px;
+}
+
+input[type='text'] {
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    padding: 10px;
+    background: transparent;
+    color: var(--fontColor);
+}
+
+input[type='text']::placeholder {
+    color: var(--fontColor);
+}
+
+button {
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50%;
+    border: none;
+    margin-left: 10px;
+    background: var(--colorBackgroundButton);
+    transition: all 0.3s ease-in-out;
+}
+
+
+
+i {
+    color: var(--fontColor);
+}
+
+.bx-search {
+    font-size: 10pt;
+}
+
+.resultado {
+    width: 100%;
+    gap: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: var(--fontColor);
+}
+
+.resultado-city {
+    margin-top: 10px;
+    text-transform: capitalize;
+}
+
+.icone-clima {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-top: 10px;
+}
+
+.icone-clima .icon-result {
+    color: var(--fontColor);
+    text-transform: capitalize;
+    margin-top: 15px;
+}
+
+.temperatura {
+    width: 100%;
+    margin-top: 10px;
+    color: var(--fontColor);
+}
+
+.spinner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    color: var(--fontColor);
+}
